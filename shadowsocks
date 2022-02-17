@@ -1,0 +1,22 @@
+更新完apt-get源 然后：
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:max-c-lv/shadowsocks-libev -y
+sudo apt-get update
+sudo apt install shadowsocks-libev
+
+然后/root/shadowsocks/下建立shadowsocks.json
+{
+    "server":"0.0.0.0",
+    "server_port":18183,
+    "local_port":1080,
+    "password":"ebf666deb8fc4e7990aa64eb964adbc7",
+    "timeout":300,
+    "method":"chacha20-ietf-poly1305"
+}
+
+启动：
+
+nohup ss-server -c /root/shadowsocks/shadowsocks.json  &
+连接：ss-local -s 47.75.65.5 -p 18195 -b 127.0.0.1 -l 1080 -k netoa3cuhf7iwlgb4e26fcxu0bkislh04 -m chacha20-ietf-poly1305
+
+
