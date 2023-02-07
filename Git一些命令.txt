@@ -1,0 +1,16 @@
+推送：
+git add .
+git commit -m "first test" -a
+git push -u origin main
+
+git pull
+git push origin main -f
+登录配置：
+git config --global user.email "502697498@qq.com"
+git config --global user.name "FangKee"
+ssh-keygen -t rsa -C "502697498@qq.com"
+移除重新添加：
+git remote rm origin
+git remote add origin http://git.vnnox.net/FangKee/python.git
+添加验证人：
+/assign_reviewer 
